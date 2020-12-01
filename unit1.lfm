@@ -1,7 +1,7 @@
 object Form1: TForm1
   Left = 345
   Height = 614
-  Top = 138
+  Top = 127
   Width = 1005
   AutoSize = True
   BorderStyle = bsDialog
@@ -37,6 +37,7 @@ object Form1: TForm1
         Top = 16
         Width = 85
         ParentFont = False
+        OnMouseDown = PB_w_1_1MouseDown
         OnPaint = PB_w_1_1Paint
       end
       object Label_L1_neuron1: TLabel
@@ -104,6 +105,7 @@ object Form1: TForm1
         Top = 16
         Width = 85
         ParentFont = False
+        OnMouseDown = PB_w_1_1MouseDown
         OnPaint = PB_w_1_1Paint
       end
       object Label_scalar_1_2: TLabel
@@ -170,6 +172,7 @@ object Form1: TForm1
         Top = 16
         Width = 85
         ParentFont = False
+        OnMouseDown = PB_w_1_1MouseDown
         OnPaint = PB_w_1_1Paint
       end
       object Label_scalar_1_3: TLabel
@@ -236,6 +239,7 @@ object Form1: TForm1
         Top = 16
         Width = 85
         ParentFont = False
+        OnMouseDown = PB_w_1_1MouseDown
         OnPaint = PB_w_1_1Paint
       end
       object Label_scalar_1_4: TLabel
@@ -302,6 +306,7 @@ object Form1: TForm1
         Top = 16
         Width = 85
         ParentFont = False
+        OnMouseDown = PB_w_1_1MouseDown
         OnPaint = PB_w_1_1Paint
       end
       object Label_scalar_1_5: TLabel
@@ -358,7 +363,7 @@ object Form1: TForm1
     Left = 152
     Height = 32
     Top = 8
-    Width = 366
+    Width = 362
     Font.Height = -17
     Font.Name = 'Sans'
     ParentFont = False
@@ -377,7 +382,7 @@ object Form1: TForm1
     ParentFont = False
   end
   object BTN_orig_create: TButton
-    Left = 528
+    Left = 520
     Height = 32
     Top = 8
     Width = 160
@@ -389,7 +394,7 @@ object Form1: TForm1
     TabOrder = 1
   end
   object BTN_learn_check: TButton
-    Left = 704
+    Left = 680
     Height = 32
     Top = 8
     Width = 99
@@ -401,12 +406,12 @@ object Form1: TForm1
     TabOrder = 2
   end
   object Label_total: TLabel
-    Left = 808
-    Height = 27
-    Top = 10
-    Width = 38
+    Left = 784
+    Height = 26
+    Top = 8
+    Width = 37
     Caption = '0%'
-    Font.Height = -24
+    Font.Height = -23
     Font.Name = 'Sans'
     ParentColor = False
     ParentFont = False
@@ -1234,11 +1239,11 @@ object Form1: TForm1
     ParentFont = False
   end
   object CB_threshold: TCheckBox
-    Left = 864
+    Left = 920
     Height = 23
-    Top = 14
-    Width = 92
-    Caption = 'вкл. порог'
+    Top = 392
+    Width = 64
+    Caption = 'порог'
     OnChange = CB_thresholdChange
     ParentFont = False
     TabOrder = 13
@@ -1284,12 +1289,24 @@ object Form1: TForm1
     TabOrder = 17
   end
   object BTN_reset: TButton
-    Left = 440
-    Height = 25
-    Top = 37
+    Left = 441
+    Height = 24
+    Top = 40
     Width = 75
     Caption = 'Сброс'
     OnClick = BTN_resetClick
     TabOrder = 18
+  end
+  object BTN_1000: TButton
+    Left = 848
+    Height = 32
+    Top = 8
+    Width = 136
+    Caption = 'Обучить 1000'
+    Font.Height = -17
+    Font.Name = 'Sans'
+    OnClick = BTN_1000Click
+    ParentFont = False
+    TabOrder = 19
   end
 end
